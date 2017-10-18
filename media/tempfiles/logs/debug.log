@@ -1,0 +1,483 @@
+Internal Server Error: /api/receiver_hooks/70/backup_image/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\viewsets.py", line 86, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 491, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 406, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<type 'NoneType'>`
+Internal Server Error: /api/receiver_hooks/70/backup_image/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\viewsets.py", line 86, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 491, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 406, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<type 'NoneType'>`
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /api/salt_master/operations/static/rest_framework/css/bootstrap.min.css
+Not Found: /api/salt_master/operations/static/rest_framework/css/bootstrap-tweaks.css
+Not Found: /api/salt_master/operations/static/rest_framework/css/prettify.css
+Not Found: /api/salt_master/operations/static/rest_framework/css/default.css
+Not Found: /api/salt_master/operations/static/rest_framework/js/ajax-form.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/csrf.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/bootstrap.min.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/prettify-min.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/default.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/ajax-form.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/csrf.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/bootstrap.min.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/prettify-min.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/default.js
+Not Found: /api/salt_master/operations/static/rest_framework/css/bootstrap.min.css
+Not Found: /api/salt_master/operations/static/rest_framework/css/default.css
+Not Found: /api/salt_master/operations/static/rest_framework/css/prettify.css
+Not Found: /api/salt_master/operations/static/rest_framework/css/bootstrap-tweaks.css
+Not Found: /api/salt_master/operations/static/rest_framework/js/ajax-form.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/csrf.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/bootstrap.min.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/prettify-min.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/default.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/ajax-form.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/csrf.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/bootstrap.min.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/prettify-min.js
+Not Found: /api/salt_master/operations/static/rest_framework/js/default.js
+Not Found: /operations/api/salt_master/
+Not Found: /operations/api/salt_master/operations/static/css/bootstrap.min.css
+Not Found: /operations/api/salt_master/operations/static/css/common.css
+Not Found: /operations/api/salt_master/operations/static/css/font-awesome.min.css
+Not Found: /operations/api/salt_master/operations/static/img/icon.png
+Not Found: /operations/api/salt_master/
+Not Found: /operations/api/salt_master/operations/static/css/bootstrap.min.css
+Not Found: /operations/api/salt_master/operations/static/css/common.css
+Not Found: /operations/api/salt_master/operations/static/css/font-awesome.min.css
+Internal Server Error: /operations/api/salt_master/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\workspace\devops\run-ims-service-operations\firstapp\middleware.py", line 83, in process_request
+    # 瀵筧pi
+AttributeError: 'list' object has no attribute 'find'
+Internal Server Error: /operations/api/salt_master/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\workspace\devops\run-ims-service-operations\firstapp\middleware.py", line 84, in process_request
+    if url.find("api") >= 0 and settings.API_DECRYPT:
+AttributeError: 'list' object has no attribute 'find'
+Not Found: /operations/api/salt_master/
+Not Found: /operations/api/salt_master/operations/static/css/bootstrap.min.css
+Not Found: /operations/api/salt_master/operations/static/css/font-awesome.min.css
+Not Found: /operations/api/salt_master/operations/static/css/common.css
+Not Found: /operations/api/salt_master/
+Not Found: /operations/api/salt_master/operations/static/css/bootstrap.min.css
+Not Found: /operations/api/salt_master/operations/static/css/common.css
+Not Found: /operations/api/salt_master/operations/static/css/font-awesome.min.css
+Not Found: /operations/api/salt_master/
+Not Found: /operations/api/salt_master/operations/static/css/bootstrap.min.css
+Not Found: /operations/api/salt_master/operations/static/css/common.css
+Not Found: /operations/api/salt_master/operations/static/css/font-awesome.min.css
+Internal Server Error: /api/salt_master/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\workspace\devops\run-ims-service-operations\firstapp\middleware.py", line 93, in process_request
+    url = url.split("operations")[1]
+IndexError: list index out of range
+Internal Server Error: /api/salt_master/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\workspace\devops\run-ims-service-operations\firstapp\middleware.py", line 93, in process_request
+    url = url.split("operations")[1]
+IndexError: list index out of range
+Internal Server Error: /api/salt_master/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\workspace\devops\run-ims-service-operations\firstapp\middleware.py", line 93, in process_request
+    url = url.split("operations")[1]
+IndexError: list index out of range
+Internal Server Error: /api/salt_master/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\workspace\devops\run-ims-service-operations\firstapp\middleware.py", line 93, in process_request
+    url = url.split("operations")[1]
+IndexError: list index out of range
+Internal Server Error: /api/salt_master/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\workspace\devops\run-ims-service-operations\firstapp\middleware.py", line 93, in process_request
+    url = url.split("operations")[1]
+IndexError: list index out of range
+Internal Server Error: /api/salt_master/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\workspace\devops\run-ims-service-operations\firstapp\middleware.py", line 94, in process_request
+    url = url.split("operations")[1]
+IndexError: list index out of range
+Internal Server Error: /api/salt_master/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\workspace\devops\run-ims-service-operations\firstapp\middleware.py", line 94, in process_request
+    url = url.split("operations")[1]
+IndexError: list index out of range
+Not Found: /static/rest_framework/css/bootstrap.min.css
+Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+Not Found: /static/rest_framework/css/prettify.css
+Not Found: /static/rest_framework/css/default.css
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/css/bootstrap.min.css
+Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/css/prettify.css
+Not Found: /static/rest_framework/css/default.css
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/css/bootstrap.min.css
+Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+Not Found: /static/rest_framework/css/default.css
+Not Found: /static/rest_framework/css/prettify.css
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/css/bootstrap.min.css
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/css/default.css
+Not Found: /static/rest_framework/css/prettify.css
+Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/css/bootstrap.min.css
+Not Found: /static/rest_framework/css/prettify.css
+Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+Not Found: /static/rest_framework/css/default.css
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /
+Not Found: /static/css/bootstrap.min.css
+Not Found: /static/css/font-awesome.min.css
+Not Found: /static/img/icon.png
+Not Found: /static/css/common.css
+Internal Server Error: /api/salt_master/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\viewsets.py", line 86, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\serializers.py", line 237, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\serializers.py", line 432, in run_validation
+    value = self.to_internal_value(data)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\serializers.py", line 462, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\fields.py", line 755, in run_validation
+    return super(CharField, self).run_validation(data)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\fields.py", line 526, in run_validation
+    self.run_validators(value)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\fields.py", line 540, in run_validators
+    validator(value)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\validators.py", line 82, in __call__
+    if qs_exists(queryset):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\validators.py", line 25, in qs_exists
+    return queryset.exists()
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\db\models\query.py", line 670, in exists
+    return self.query.has_results(using=self.db)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\db\models\sql\query.py", line 517, in has_results
+    return compiler.has_results()
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\db\models\sql\compiler.py", line 853, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\db\models\sql\compiler.py", line 894, in execute_sql
+    raise original_exception
+OperationalError: (1267, "Illegal mix of collations (latin1_swedish_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+Not Found: //api/salt_minion/export_execl/
+Not Found: /static/css/bootstrap.min.css
+Not Found: /static/css/font-awesome.min.css
+Not Found: /static/css/common.css
+Not Found: /static/img/icon.png
+Internal Server Error: /api/receiver_hooks/389/push_image/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\viewsets.py", line 86, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\workspace\devops\run-ims-service-operations\firstapp\apiviews.py", line 1197, in push_image
+    if "Login Succeeded" not in _data[0][hooks_obj.salt_minion_id]:
+KeyError: u'193.168.0.90'
+Internal Server Error: /api/receiver_hooks/389/push_image/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\viewsets.py", line 86, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\workspace\devops\run-ims-service-operations\firstapp\apiviews.py", line 1198, in push_image
+    if "Login Succeeded" not in _data[0][hooks_obj.salt_minion_id]:
+KeyError: u'193.168.0.90'
+Not Found: /
+Not Found: /static/css/bootstrap.min.css
+Not Found: /static/css/font-awesome.min.css
+Not Found: /static/css/common.css
+Not Found: /static/img/icon.png
+Not Found: /
+Not Found: /static/css/bootstrap.min.css
+Not Found: /static/css/font-awesome.min.css
+Not Found: /static/css/common.css
+Not Found: /static/img/icon.png
+Not Found: /login.json
+Not Found: /login
+Not Found: /login
+Not Found: /login
+Not Found: /login
+Not Found: /login
+Not Found: /login
+Not Found: /login
+Not Found: /login
+Not Found: /login
+Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\middleware\common.py", line 63, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\middleware\common.py", line 101, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8810/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\middleware\common.py", line 63, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\middleware\common.py", line 101, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8810/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Not Found: /api/login
+Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\middleware\common.py", line 63, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\middleware\common.py", line 101, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8810/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 244, in _legacy_get_response
+    response = middleware_method(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\middleware\common.py", line 63, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\middleware\common.py", line 101, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8810/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Not Found: /static/rest_framework/css/bootstrap.min.css
+Not Found: /static/rest_framework/css/prettify.css
+Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+Not Found: /static/rest_framework/css/default.css
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /static/rest_framework/css/bootstrap.min.css
+Not Found: /static/rest_framework/css/prettify.css
+Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+Not Found: /static/rest_framework/css/default.css
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/default.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/css/bootstrap.min.css
+Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+Not Found: /static/rest_framework/css/prettify.css
+Not Found: /static/rest_framework/css/default.css
+Not Found: /static/rest_framework/js/jquery-1.12.4.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/bootstrap.min.js
+Not Found: /static/rest_framework/js/prettify-min.js
+Not Found: /static/rest_framework/js/default.js

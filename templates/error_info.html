@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>错误信息</title>
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}"/>
+    <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}"/>
+    <link rel="stylesheet" href="{% static "css/common.css" %}"/>
+
+    <link rel="icon" type="image/x-icon" href="{% static "img/icon.png" %}" />
+</head>
+<body>
+<div class="container">
+    <div class="err_cont">
+        <div class="err_tex">
+            <h1><span><i class="icon-info-sign"></i>很抱歉</span></h1>
+
+            <h3 class="margintop0 padding5 inline word-break">{{ message }}</h3>
+
+            <div>
+            </div>
+        </div>
+        <div class="err_pictrue">
+            <div class="err_number">{{ status_code }}</div>
+            <div class="err_return" onclick="goback();"></div>
+            <div class="err_back_home" onclick="goback();"></div>
+        </div>
+    </div>
+
+</div>
+<script>
+    function goback() {
+        history.back();
+    }
+    function gohome() {
+        window.top.location.href = '/';
+    }
+</script>
+</body>
+</html>

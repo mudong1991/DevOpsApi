@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>--</title>
+
+    <link rel="stylesheet" href="{% static "css/common.css" %}"/>
+    {% block head_css %}
+    {% endblock %}
+
+    <script src="{% static 'libs/avalon-2.2.7/avalon.min.js' %}"></script>
+    <script>
+        /*avalon设置*/
+        avalon.config({
+            interpolate: ['{&','&}'],
+            debug: false
+        });
+    </script>
+
+    {% block head_js %}
+    {% endblock %}
+</head>
+<body>
+    {% block avalon_content %}
+    {% endblock %}
+
+    {% block body_js %}
+    {% endblock %}
+</body>
+</html>

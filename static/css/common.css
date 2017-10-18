@@ -1,0 +1,64 @@
+/*通用样式*/
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+/*错误页面*/
+.err_cont {
+    width: 600px;
+    margin: 50px auto;
+}
+
+.err_tex {
+    float: left;
+    width: 280px;
+    padding: 50px 0 0;
+}
+
+.err_pictrue {
+    float: right;
+    background: url(../img/erro_bg.jpg) no-repeat right center !important;
+    width: 317px;
+    height: 392px;
+    font-size: large;
+}
+.err_pictrue2{
+    float: right;
+    background: url(../img/erro_bg.jpg) no-repeat right top;
+    width: 240px;
+    height: 265px;
+    font-size: large;
+}
+.err_number {
+    height: 270px;
+    width: 250px;
+    line-height: 270px;
+    text-align: center;
+    font-size: 45px;
+    color: #ffffff;
+    float: right;
+}
+
+.err_return {
+    width: 70px;
+    height: 50px;
+    top: 260px;
+    left: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.err_back_home {
+    width: 70px;
+    height: 50px;
+    top: 260px;
+    left: 140px;
+    position: relative;
+    cursor: pointer;
+}
+
+.sub_device_title{
+    text-align: center !important;
+    font-size: 20px;
+}

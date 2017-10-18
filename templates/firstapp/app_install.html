@@ -1,0 +1,24 @@
+{% extends 'firstapp/base_avalon.html' %}
+
+{% block head_js %}
+    <script>
+        var vm = avalon.define({
+            $id: "test",
+            name: "司徒正美",
+            array: [11,22,33]
+        });
+        setTimeout(function(){
+           vm.array.set(0, 444)
+        }, 3000)
+    </script>
+{% endblock %}
+
+{% block avalon_content %}
+    <div ms-controller="test">
+        <input ms-duplex="@name">
+        <p>Hello,{&@name&}!</p>
+        <ul>
+           <li ms-for="($index,el) in @array">{&$index&}--{&el&}</li>
+        </ul>
+    </div>
+{% endblock %}
