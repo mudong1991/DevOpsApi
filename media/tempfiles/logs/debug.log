@@ -1901,3 +1901,5 @@ Traceback (most recent call last):
   File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\template\response.py", line 129, in content
     'The response content must be rendered before it can be accessed.'
 ContentNotRenderedError: The response content must be rendered before it can be accessed.
+Not Found: /api/check_login/
+Not Found: /api/check_login/

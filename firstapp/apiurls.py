@@ -12,6 +12,7 @@ from firstapp.dev_cloud_views import auth_views
 
 urlpatterns = [
     url(r'^login/', auth_views.LoginView.as_view(), name='login'),
+    url(r'^check_login/', auth_views.CheckLoginView.as_view(), name='check_login')
 ]
 
 route = routers.DefaultRouter()
