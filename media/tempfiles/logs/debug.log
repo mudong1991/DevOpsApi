@@ -481,3 +481,1423 @@ Not Found: /static/rest_framework/js/csrf.js
 Not Found: /static/rest_framework/js/bootstrap.min.js
 Not Found: /static/rest_framework/js/prettify-min.js
 Not Found: /static/rest_framework/js/default.js
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\channels\handler.py", line 243, in process_exception_by_middleware
+    return super(AsgiHandler, self).process_exception_by_middleware(exception, request)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 489, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 449, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\rest_framework\views.py", line 486, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\myWorkspace\python\DevOpsApi\firstapp\dev_cloud_views\auth_views.py", line 42, in post
+    raise Exception('杩欐槸涓€涓敊璇俊鎭?)
+Exception: 杩欐槸涓€涓敊璇俊鎭?
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 131, in get_response
+    response = middleware_method(request, response)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\middleware\common.py", line 139, in process_response
+    response['Content-Length'] = str(len(response.content))
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\template\response.py", line 129, in content
+    'The response content must be rendered before it can be accessed.'
+ContentNotRenderedError: The response content must be rendered before it can be accessed.
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\core\handlers\base.py", line 131, in get_response
+    response = middleware_method(request, response)
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\middleware\common.py", line 139, in process_response
+    response['Content-Length'] = str(len(response.content))
+  File "D:\PyEnv\DevOpsEnv\lib\site-packages\django\template\response.py", line 129, in content
+    'The response content must be rendered before it can be accessed.'
+ContentNotRenderedError: The response content must be rendered before it can be accessed.

@@ -3,8 +3,6 @@
 """
 项目常用工具函数和接口
 """
-import os
-import sys
 import tarfile
 import logging
 import os

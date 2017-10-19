@@ -2,6 +2,7 @@
 # Created by mudong at 2017/3/8 0008
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import AbstractUser
 
 
 # Create your models here.
@@ -12,6 +13,49 @@ def get_error_messages(label):
         "max_length": "{0}:长度超过指定范围！".format(label),
         "invalid": "{0}: 填写合法的整数值".format(label)
     }
+
+
+class Menu(models.Model):
+    name = models.CharField(max_length=255)
+    url = models.CharField(max_length=255)
+    description = models.CharField(max_length=255, default='')
+    icon = models.CharField(max_length=255, default="")
+    remark = models.CharField(max_length=255, default='')
+    parent = models.ForeignKey('self', null=True, blank=True)
+    ordernum = models.IntegerField(default=0)
+    level = models.IntegerField(default=1)
+
+    class Meta:
+        db_table = "menu"
+        default_permissions = ("read", "change", "add", "delete")
+
+
+class Role(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.CharField(max_length=255, default='', blank=True, null=True)
+    remark = models.CharField(max_length=255, default='', blank=True, null=True)
+    menus = models.ManyToManyField(Menu)
+    unique = models.CharField(max_length=10, default="false", blank=True, null=True)
+
+    class Meta:
+        db_table = "role"
+        default_permissions = ("read", "change", "add", "delete")
+
+
+class User(AbstractUser):
+    role = models.ForeignKey(Role, default=2)
+    sessionid = models.CharField(default="", max_length=255, blank=True, null=True)
+    isonline = models.IntegerField(default=0)
+    login_times = models.IntegerField(default=0)  # 登录过的次数
+
+    class Meta:
+        verbose_name = '用户'
+        verbose_name_plural = verbose_name
+        ordering = ['-id']
+        default_permissions = ("read", "change", "add", "delete")
+
+    def __unicode__(self):
+        return self.username
 
 
 class BusinessAdmin(models.Model):

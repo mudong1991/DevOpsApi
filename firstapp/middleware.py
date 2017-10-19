@@ -10,9 +10,9 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import AnonymousUser
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
-
 from util import running_log
 from util_aes import aes_html_data_decrypt, aes_api_data_encrypt
+from django.http import HttpResponseServerError
 
 
 class CustomAuthorizeMiddleWare(object):
@@ -56,6 +56,7 @@ class CustomExceptionMiddleWare(object):
         :return:
         """
         import exceptions
+        url = request.path
 
         # 记录异常
         running_log.error(exception.message or exception)
@@ -64,9 +65,11 @@ class CustomExceptionMiddleWare(object):
         if isinstance(exception, exceptions.IOError):
             if exception.errno == 13:
                 exception.message = "您没有权限操作相关文件"
-
-        return render(request, 'error_info.html', {"message": exception.message or exception, "status_code": 500},
-                      status=500)
+        if url.startswith('/api'):
+            return HttpResponseServerError(exception.message or exception)
+        else:
+            return render(request, 'error_info.html', {"message": exception.message or exception, "status_code": 500},
+                          status=500)
 
 
 class CustomDecryptMiddleWare(object):

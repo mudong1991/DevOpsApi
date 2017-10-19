@@ -5,12 +5,13 @@
 """
 认证相关API接口
 """
-from django.contrib.auth.models import User
+from firstapp.models import User
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import login, logout, authenticate
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from firstapp import util
 
 
 def catch_exception_response(func):
@@ -27,15 +28,55 @@ def catch_exception_response(func):
         try:
             return func(*args, **kwargs)
         except Exception, e:
-            return Response({"msg": e.message}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response(e.message, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     return _wrapper
 
 
 class LoginView(APIView):
     def post(self, request, format=None):
-        username = request.data['username']
-        password = request.data['password']
+        username = request.data.get('username', '')
+        password = request.data.get('password', '')
+        verifyCode = request.data.get('verifyCode', '')
 
-        print 'aaaa'
-        return Response({'ok'})
+        # 响应状态码和数据
+        result_code = 1
+        result_data = ''
+
+        # 判断用户是否存在
+        exist_user = User.objects.filter(username=username).first()
+
+        # 用户不存在
+        if not exist_user:
+            result_code = 1
+            result_data = '对不起，该用户不存在！'
+        elif exist_user.is_active is False:
+            result_code = 1
+            result_data = '用户已经被锁定，请联系管理员！'
+        else:
+            # 登录认证
+            user = authenticate(username=username, password=password)
+            # 登录失败
+            if user is None:
+                result_code = 1
+                result_data = '登录失败，用户名密码错误！'
+            else:
+                user.backend = 'django.contrib.auth.backends.ModelBackend'  # 指定默认的登录验证方式
+                login(request, user)
+
+                # 保存用户登录信息
+                user_obj = User.objects.get(id=exist_user.id)
+                user_obj.last_login = util.get_current_time()
+                user_obj.isonline = 1
+                user_obj.sessionid = request.session.session_key  # 必须要先login登录完成，才会生成session_key
+                user_obj.login_times += 1
+                user_obj.save()
+
+                result_code = 0
+                result_data = '登录成功！'
+
+        return Response({'result_code': result_code, 'result_data': result_data})
+
+
+class CheckLoginView(APIView):
+    pass

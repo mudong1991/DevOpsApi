@@ -91,8 +91,8 @@ local_host = '127.0.0.1'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-mysql_host = '193.168.0.91'
-# mysql_host = local_host
+# mysql_host = '193.168.0.91'
+mysql_host = local_host
 DATABASES_OPTIONS = {
     "MYSQL": {
         'ENGINE': 'django.db.backends.mysql',
@@ -132,6 +132,9 @@ USE_TZ = False
 
 # 设置项是否开启URL访问地址后面不为/跳转至带有/的路径
 APPEND_SLASH = True
+# 自定义用户模型
+AUTH_USER_MODEL = 'firstapp.User'
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)
 
 # global config
 SYSTEM_NAME = u"四方科技资源管理系统"
