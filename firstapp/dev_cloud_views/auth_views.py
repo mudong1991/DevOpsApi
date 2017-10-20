@@ -12,6 +12,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from firstapp import util
+from firstapp import serializers
 
 
 def catch_exception_response(func):
@@ -73,7 +74,7 @@ class LoginView(APIView):
                 user_obj.save()
 
                 result_code = 0
-                result_data = '登录成功！'
+                result_data = serializers.UserSerializer(user_obj).data
 
         return Response({'result_code': result_code, 'result_data': result_data})
 

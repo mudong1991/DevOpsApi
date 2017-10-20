@@ -25,6 +25,12 @@ def get_error_messages(label):
     }
 
 
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.User
+        fields = '__all__'
+
+
 class BusinessAdminSerializer(serializers.ModelSerializer):
     """
     业务管理模型数据序列化
