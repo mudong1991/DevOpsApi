@@ -172,8 +172,8 @@ SESSION_TIME_OUT = 48 * 60 * 60
 # cache config
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': '/tmp/django_cache',
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake',  # 给缓存放置的内存区设置一个名字
         'TIMEOUT': 600,
     }
 }

@@ -61,6 +61,8 @@ class LoginView(APIView):
             if user is None:
                 result_code = 1
                 result_data = '登录失败，用户名密码错误！'
+                # 记录登录者的IP和域名
+
             else:
                 user.backend = 'django.contrib.auth.backends.ModelBackend'  # 指定默认的登录验证方式
                 login(request, user)
@@ -74,9 +76,19 @@ class LoginView(APIView):
                 user_obj.save()
 
                 result_code = 0
-                result_data = serializers.UserSerializer(user_obj).data
+                result_data = {'user_id': user_obj.id, 'user_name': user_obj.username, 'session_id': user_obj.sessionid}
 
         return Response({'result_code': result_code, 'result_data': result_data})
+
+
+class GetUserInfoBySession(APIView):
+    def get(self, request):
+        print request.GET.get('session_id')
+        session_id = request.GET.get('session_id')
+        user_obj = User.objects.filter(sessionid=session_id).first()
+        user_data = serializers.UserSerializer(user_obj).data
+
+        return Response(user_data)
 
 
 class CheckLoginView(APIView):

@@ -11,7 +11,8 @@ from firstapp import apiviews
 from firstapp.dev_cloud_views import auth_views
 
 urlpatterns = [
-    url(r'^login/', auth_views.LoginView.as_view(), name='login'),
+    url(r'^login/', auth_views.LoginView.as_view(), name='login'),  # 登录
+    url(r'^getUserInfoBySession/', auth_views.GetUserInfoBySession.as_view())
 ]
 
 route = routers.DefaultRouter()
