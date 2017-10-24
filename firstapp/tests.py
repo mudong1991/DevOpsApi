@@ -7,5 +7,6 @@ import datetime
 import time
 a = "2017-09-01 00:00:00"
 
-print time.mktime(time.strptime(a, '%Y-%m-%d %H:%M:%S'))
-# print time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1505040534))
+# print time.mktime(time.strptime(a, '%Y-%m-%d %H:%M:%S'))
+# print time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(1508816089))
+print datetime.datetime.now()
