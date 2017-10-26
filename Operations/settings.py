@@ -165,7 +165,7 @@ RANCHER_SECRET_KEY = 'EMpw28rxpmrm5iqZXVYDC7QcEY2AQiRhFNquvK3H'
 CORS_ORIGIN_ALLOW_ALL = True  # 全部接受，白名单将会无效。
 
 # session config
-SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SESSION_COOKIE_AGE = 12 * 60 * 60
 SESSION_TIME_OUT = 48 * 60 * 60

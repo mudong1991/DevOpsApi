@@ -143,6 +143,10 @@ class LoginView(APIView):
                 user_obj.login_times += 1
                 user_obj.save()
 
+                # 保存用户session
+                request.session['username'] = username
+
+                print request.session['username']
                 result_code = 0
                 result_data = {'user_id': user_obj.id, 'user_name': user_obj.username, 'session_id': user_obj.sessionid}
         return Response({'result_code': result_code, 'result_data': result_data})
@@ -177,4 +181,9 @@ class GetVerify(APIView):
 
 
 class CheckLoginView(APIView):
-    pass
+    def get(self, request):
+        print request.session.get('username')
+
+        result_code = 0
+        result_data = ''
+        return Response({'result_code': result_code, 'result_data': result_data})
