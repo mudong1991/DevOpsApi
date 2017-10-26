@@ -49,6 +49,7 @@ class LoginView(APIView):
         username = request.data.get('username', '')
         password = request.data.get('password', '')
         verify_code = request.data.get('verifyCode', '')
+        keep_login = request.data.get('keepLogin', False)
 
         # 失败次数和锁定时间
         login_fail_limit_times = settings.LOGIN_FAILED_TIMES_LIMIT
@@ -71,7 +72,7 @@ class LoginView(APIView):
                 img.save(settings.VERIFY_IMG_PATH)
                 cache.set('verify_%s' % request_ip, code, 360 * 24 * 60 * 60)
                 result_code = 1
-                result_data = {'result_msg': '对不起，验证码错误！', 'need_verify': True, 'verify_url': settings.VERIFY_IMG_URL}
+                result_data = {'result_msg': '对不起，验证码错误！', 'need_verify': False, 'verify_url': settings.VERIFY_IMG_URL}
                 return Response({'result_code': result_code, 'result_data': result_data})
 
         # 验证码通过判断登录信息
@@ -143,12 +144,15 @@ class LoginView(APIView):
                 user_obj.login_times += 1
                 user_obj.save()
 
-                # 保存用户session
-                request.session['username'] = username
+                if keep_login:
+                    cache.set('success_login_%s_%s' % (request_ip, user_obj.id), 1, 360 * 24 * 60 * 60)
 
-                print request.session['username']
+                else:
+                    cache.set('success_login_%s_%s' % (request_ip, user_obj.sessionid), 1, 360 * 24 * 60 * 60)
+
                 result_code = 0
-                result_data = {'user_id': user_obj.id, 'user_name': user_obj.username, 'session_id': user_obj.sessionid}
+                result_data = {'user_id': user_obj.id, 'user_session': user_obj.sessionid}
+
         return Response({'result_code': result_code, 'result_data': result_data})
 
 
@@ -156,9 +160,22 @@ class GetUserInfoBySession(APIView):
     def get(self, request):
         session_id = request.GET.get('session_id')
         user_obj = User.objects.filter(sessionid=session_id).first()
-        user_data = serializers.UserSerializer(user_obj).data
+        if user_obj:
+            user_data = serializers.UserSerializer(user_obj).data
+            return Response({'result_code': 0, 'result_data': user_data})
+        else:
+            return Response({'result_code': 1, 'result_data': '没有找到相关用户信息'})
 
-        return Response(user_data)
+
+class GetUserInfoById(APIView):
+    def get(self, request):
+        user_id = request.GET.get('user_id')
+        user_obj = User.objects.filter(id=user_id).first()
+        if user_obj:
+            user_data = serializers.UserSerializer(user_obj).data
+            return Response({'result_code': 0, 'result_data': user_data})
+        else:
+            return Response({'result_code': 1, 'result_data': '没有找到相关用户信息'})
 
 
 class GetVerify(APIView):
@@ -181,9 +198,34 @@ class GetVerify(APIView):
 
 
 class CheckLoginView(APIView):
-    def get(self, request):
-        print request.session.get('username')
+    def post(self, request):
+        if request.META.has_key('HTTP_X_FORWARDED_FOR'):
+            request_ip = request.META['HTTP_X_FORWARDED_FOR']
+        else:
+            request_ip = request.META['REMOTE_ADDR']
+
+        user_id = request.data.get('user_id', '')
+        user_session = request.data.get('user_session', '')
 
         result_code = 0
         result_data = ''
+
+        if user_id:
+            is_login = cache.get('success_login_%s_%s' % (request_ip, user_id))
+            if is_login is None:
+                result_code = 0
+                result_data = ''
+            else:
+                result_code = 1
+                result_data = ''
+
+        if user_session:
+            is_login = cache.get('success_login_%s_%s' % (request_ip, user_session))
+            if is_login is None:
+                result_code = 0
+                result_data = ''
+            else:
+                result_code = 1
+                result_data = ''
+
         return Response({'result_code': result_code, 'result_data': result_data})

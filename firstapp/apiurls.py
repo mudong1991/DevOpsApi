@@ -12,7 +12,9 @@ from firstapp.dev_cloud_views import auth_views
 
 urlpatterns = [
     url(r'^login/', auth_views.LoginView.as_view(), name='login'),  # 登录
+    url(r'^checkLogin/', auth_views.CheckLoginView.as_view()),
     url(r'^getUserInfoBySession/', auth_views.GetUserInfoBySession.as_view()),  # 根据session查用户信息
+    url(r'^getUserInfoById/', auth_views.GetUserInfoById.as_view()),  # 根据id查用户信息
     url(r'^getVerify/', auth_views.GetVerify.as_view())
 ]
 

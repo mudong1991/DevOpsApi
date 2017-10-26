@@ -142,6 +142,7 @@ SYSTEM_VERSIONS = u"1.0"
 SYSTEM_COPYRIGHT = u"成都四方信息技术有限公司平台组"
 LOCK_TIME = 5    # 锁定时间限制(单位是分钟)
 LOGIN_FAILED_TIMES_LIMIT = 5    # 密码错误限制次数
+LOGIN_TIME_OUT = 30  # 登录超时（单位是秒）
 VERIFY_IMG_URL = '/media/verify/verify.jpg'  # 验证码生成url
 VERIFY_IMG_PATH = os.path.join(BASE_DIR, 'media', 'verify', 'verify.jpg')  # 验证码生成路径
 API_ENCRYPT = False  # 是否对api数据机密
