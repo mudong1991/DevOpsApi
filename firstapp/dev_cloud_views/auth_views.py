@@ -144,12 +144,6 @@ class LoginView(APIView):
                 user_obj.login_times += 1
                 user_obj.save()
 
-                if keep_login:
-                    cache.set('success_login_%s_%s' % (request_ip, user_obj.id), 1, 360 * 24 * 60 * 60)
-
-                else:
-                    cache.set('success_login_%s_%s' % (request_ip, user_obj.sessionid), 1, 360 * 24 * 60 * 60)
-
                 result_code = 0
                 result_data = {'user_id': user_obj.id, 'user_session': user_obj.sessionid}
 
@@ -195,37 +189,3 @@ class GetVerify(APIView):
             return Response({'need_verify': True, 'verify_url': settings.VERIFY_IMG_URL})
         else:
             return Response({'need_verify': False, 'verify_url': ''})
-
-
-class CheckLoginView(APIView):
-    def post(self, request):
-        if request.META.has_key('HTTP_X_FORWARDED_FOR'):
-            request_ip = request.META['HTTP_X_FORWARDED_FOR']
-        else:
-            request_ip = request.META['REMOTE_ADDR']
-
-        user_id = request.data.get('user_id', '')
-        user_session = request.data.get('user_session', '')
-
-        result_code = 0
-        result_data = ''
-
-        if user_id:
-            is_login = cache.get('success_login_%s_%s' % (request_ip, user_id))
-            if is_login is None:
-                result_code = 0
-                result_data = ''
-            else:
-                result_code = 1
-                result_data = ''
-
-        if user_session:
-            is_login = cache.get('success_login_%s_%s' % (request_ip, user_session))
-            if is_login is None:
-                result_code = 0
-                result_data = ''
-            else:
-                result_code = 1
-                result_data = ''
-
-        return Response({'result_code': result_code, 'result_data': result_data})

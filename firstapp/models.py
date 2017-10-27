@@ -2,7 +2,7 @@
 # Created by mudong at 2017/3/8 0008
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, Permission
 
 
 # Create your models here.
@@ -30,32 +30,29 @@ class Menu(models.Model):
         default_permissions = ("read", "change", "add", "delete")
 
 
-class Role(models.Model):
-    name = models.CharField(max_length=50)
-    description = models.CharField(max_length=255, default='', blank=True, null=True)
-    remark = models.CharField(max_length=255, default='', blank=True, null=True)
-    menus = models.ManyToManyField(Menu)
-    unique = models.CharField(max_length=10, default="false", blank=True, null=True)
+class GroupProfile(models.Model):
+    name = models.CharField(max_length=500)
+    create_time = models.DateTimeField(default=timezone.now, blank=True, null=True)
+    description = models.CharField(max_length=500, blank=True, null=True)
+    permission = models.ManyToManyField(Permission, blank=True, null=True)
+    parent_group = models.ForeignKey('self')
 
     class Meta:
-        db_table = "role"
-        default_permissions = ("read", "change", "add", "delete")
+        db_table = 'group_profile'
 
 
 class User(AbstractUser):
-    role = models.ForeignKey(Role, default=2)
+    parent_user = models.ForeignKey('self')
+    groups_profile = models.ManyToManyField(GroupProfile)
+    avatar = models.ImageField(upload_to='avatar/%Y/%m', default='avatar/default.jpg',
+                               max_length=400, blank=True, null=True, verbose_name='用户头像')
     sessionid = models.CharField(default="", max_length=255, blank=True, null=True)
     isonline = models.IntegerField(default=0)
     login_times = models.IntegerField(default=0)  # 登录过的次数
 
     class Meta:
-        verbose_name = '用户'
-        verbose_name_plural = verbose_name
-        ordering = ['-id']
+        db_table = 'user'
         default_permissions = ("read", "change", "add", "delete")
-
-    def __unicode__(self):
-        return self.username
 
 
 class BusinessAdmin(models.Model):
