@@ -62,8 +62,8 @@ class LoginView(APIView):
         exist_user = User.objects.filter(username=username).first()
 
         # 需要验证码首先验证验证码
-        print cache.get('verify_%s' % request_ip)
         if cache.get('verify_%s' % request_ip) is not None:
+            result_data['need_verify'] = True
             verify = cache.get('verify_%s' % request_ip)
             if str(verify).lower() != str(verify_code).lower():
                 # 重新生成验证码
@@ -71,24 +71,33 @@ class LoginView(APIView):
                 img.save(settings.VERIFY_IMG_PATH)
                 cache.set('verify_%s' % request_ip, code, 360 * 24 * 60 * 60)
                 result_code = 1
-                result_data = {'result_msg': '对不起，验证码错误！', 'need_verify': False, 'verify_url': settings.VERIFY_IMG_URL}
+                result_data['result_msg'] = '对不起，验证码错误！'
+                # 生成验证码
+                img, code = gvcode.generate()
+                img.save(settings.VERIFY_IMG_PATH)
+                cache.set('verify_%s' % request_ip, code, 360 * 24 * 60 * 60)
+                result_data['verify_url'] = settings.VERIFY_IMG_URL
                 return Response({'result_code': result_code, 'result_data': result_data})
+
+        else:
+            result_data['need_verify'] = False
 
         # 验证码通过判断登录信息
         # 用户不存在
         if not exist_user:
             result_code = 1
-            result_data = {'result_msg': '对不起，该用户不存在！', 'need_verify': False}
+            result_data['result_msg'] = '对不起，该用户不存在！'
         # 用户未激活
         elif exist_user.is_active is False:
             result_code = 1
-            result_data = {'result_msg': '用户未激活，请联系管理员！', 'need_verify': False}
+            result_data['result_msg'] = '用户未激活，请联系管理员！'
         # 用户被锁定
         elif cache.get('error_login_lock_%s_%s' % (request_ip, username)):
             time_stmap = cache.get('error_login_lock_%s_%s' % (request_ip, username))
             lock_surplus_second = int(time_stmap) - int(time.time())
             result_code = 2
-            result_data = {'result_msg': '用户已经锁定，请%s秒后再试。' % lock_surplus_second, 'need_verify': True, 'lock_surplus_second': lock_surplus_second}
+            result_data['result_msg'] = '用户已经锁定，请%s秒后再试。' % lock_surplus_second
+            result_data['lock_surplus_second'] = lock_surplus_second
         else:
             # 登录认证
             user = authenticate(username=username, password=password)
@@ -99,37 +108,24 @@ class LoginView(APIView):
                 if error_login_data is None:
                     result_code = 1
                     cache.set('error_login_%s_%s' % (request_ip, username), 0, lock_time * 60)
-                    result_data = {'result_msg': '登录失败，用户名密码错误！', 'need_verify': False}
+                    result_data['result_msg'] = '登录失败，用户名密码错误！'
                 else:
-                    new_error_login_data = int(error_login_data)
-                    new_error_login_data += 1
+                    new_error_login_data = int(error_login_data) + 1
                     cache.set('error_login_%s_%s' % (request_ip, username), new_error_login_data, lock_time * 60)
 
                     if new_error_login_data < login_fail_limit_times:
+                        result_data['result_msg'] = '账户密码错误，再输入%s次用户将会锁定%s分钟。' \
+                                                    % (login_fail_limit_times - new_error_login_data, lock_time)
                         if new_error_login_data > 1:
-                            result_data = {'result_msg': '账户密码错误，再输入%s次用户将会锁定%s分钟。' %
-                                                         (login_fail_limit_times - new_error_login_data, lock_time),
-                                           'need_verify': True}
-                        else:
-                            result_data = {'result_msg': '账户密码错误，再输入%s次用户将会锁定%s分钟。' %
-                                                         (login_fail_limit_times - new_error_login_data, lock_time),
-                                           'need_verify': False}
+                            result_data['need_verify'] = True
                     else:
                         # 锁定用户
                         cache.set('error_login_lock_%s_%s' % (request_ip, username), int(time.time()) + lock_time * 60, lock_time * 60)
                         lock_surplus_second = lock_time * 60
                         result_code = 2
-                        result_data = {'result_msg': '用户已经锁定，请%s秒后再试。' % lock_surplus_second, 'need_verify': True,
-                                       'lock_surplus_second': lock_surplus_second}
+                        result_data['result_msg'] = '用户已经锁定，请%s秒后再试。' % lock_surplus_second
+                        result_data['lock_surplus_second'] = lock_surplus_second
 
-                # 生成验证码
-                if result_data["need_verify"]:
-                    img, code = gvcode.generate()
-                    img.save(settings.VERIFY_IMG_PATH)
-                    cache.set('verify_%s' % request_ip, code, 360 * 24 * 60 * 60)
-                    result_data['verify_url'] = settings.VERIFY_IMG_URL
-                else:
-                    cache.set('verify_%s' % request_ip, '', 0)
             # 登录成功
             else:
                 user.backend = 'django.contrib.auth.backends.ModelBackend'  # 指定默认的登录验证方式
@@ -144,28 +140,28 @@ class LoginView(APIView):
                 user_obj.save()
 
                 result_code = 0
-                result_data = {'sessionid': user_obj.sessionid, 'csrftoken': get_token(request)}
+                result_data['sessionid'] = user_obj.sessionid
+                result_data['csrftoken'] = get_token(request)
+
+            print result_data
+            # 生成验证码
+            if result_data["need_verify"]:
+                img, code = gvcode.generate()
+                img.save(settings.VERIFY_IMG_PATH)
+                cache.set('verify_%s' % request_ip, code, 360 * 24 * 60 * 60)
+                result_data['verify_url'] = settings.VERIFY_IMG_URL
+            else:
+                cache.set('verify_%s' % request_ip, '', 0)
 
         return Response({'result_code': result_code, 'result_data': result_data})
 
 
-class GetUserInfoBySession(APIView):
+class CheckUserInfo(APIView):
     def get(self, request):
         print request.user
         print '------'
         session_id = request.GET.get('session_id')
         user_obj = User.objects.filter(sessionid=session_id).first()
-        if user_obj:
-            user_data = serializers.UserSerializer(user_obj).data
-            return Response({'result_code': 0, 'result_data': user_data})
-        else:
-            return Response({'result_code': 1, 'result_data': '没有找到相关用户信息'})
-
-
-class GetUserInfoById(APIView):
-    def get(self, request):
-        user_id = request.GET.get('user_id')
-        user_obj = User.objects.filter(id=user_id).first()
         if user_obj:
             user_data = serializers.UserSerializer(user_obj).data
             return Response({'result_code': 0, 'result_data': user_data})
@@ -186,6 +182,7 @@ class GetVerify(APIView):
         verify = cache.get('verify_%s' % request_ip)
         img, code = gvcode.generate()
         img.save(settings.VERIFY_IMG_PATH)
+        cache.set('verify_%s' % request_ip, code, 360 * 24 * 60 * 60)
         if verify is not None:
             return Response({'need_verify': True, 'verify_url': settings.VERIFY_IMG_URL})
         else:

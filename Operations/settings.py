@@ -164,6 +164,14 @@ RANCHER_SECRET_KEY = 'EMpw28rxpmrm5iqZXVYDC7QcEY2AQiRhFNquvK3H'
 
 # cors config
 CORS_ORIGIN_ALLOW_ALL = True  # 全部接受，白名单将会无效。
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
 CORS_ALLOW_HEADERS = (
     'accept',
     'accept-encoding',
@@ -173,7 +181,7 @@ CORS_ALLOW_HEADERS = (
     'origin',
     'user-agent',
     'x-csrftoken',
-    'Cookie',
+    'cooike',
     'access-control-allow-credentials',
     'sessionid',
     'x-requested-with',

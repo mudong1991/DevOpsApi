@@ -12,9 +12,9 @@ from firstapp.dev_cloud_views import auth_views
 
 urlpatterns = [
     url(r'^login/', auth_views.LoginView.as_view(), name='login'),  # 登录
-    url(r'^getUserInfoBySession/', auth_views.GetUserInfoBySession.as_view()),  # 根据session查用户信息
-    url(r'^getUserInfoById/', auth_views.GetUserInfoById.as_view()),  # 根据id查用户信息
-    url(r'^getVerify/', auth_views.GetVerify.as_view())
+    url(r'^checkUserInfo/', auth_views.CheckUserInfo.as_view()),  # 判断用户是否登录
+    url(r'^getVerify/', auth_views.GetVerify.as_view()),
+    url(r'^checkUserIsLogin/', auth_views.GetVerify.as_view()),  # 判断用户是否已登录
 ]
 
 route = routers.DefaultRouter()
