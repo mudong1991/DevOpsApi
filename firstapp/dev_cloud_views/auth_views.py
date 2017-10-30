@@ -9,7 +9,6 @@ import gvcode
 import time
 import os
 from firstapp.models import User
-from django.contrib.auth.hashers import make_password
 from django.contrib.auth import login, logout, authenticate
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -18,6 +17,7 @@ from firstapp import util
 from firstapp import serializers
 from django.core.cache import cache
 from django.conf import settings
+from django.middleware.csrf import get_token
 
 
 def catch_exception_response(func):
@@ -49,7 +49,6 @@ class LoginView(APIView):
         username = request.data.get('username', '')
         password = request.data.get('password', '')
         verify_code = request.data.get('verifyCode', '')
-        keep_login = request.data.get('keepLogin', False)
 
         # 失败次数和锁定时间
         login_fail_limit_times = settings.LOGIN_FAILED_TIMES_LIMIT
@@ -145,13 +144,15 @@ class LoginView(APIView):
                 user_obj.save()
 
                 result_code = 0
-                result_data = {'user_id': user_obj.id, 'user_session': user_obj.sessionid}
+                result_data = {'sessionid': user_obj.sessionid, 'csrftoken': get_token(request)}
 
         return Response({'result_code': result_code, 'result_data': result_data})
 
 
 class GetUserInfoBySession(APIView):
     def get(self, request):
+        print request.user
+        print '------'
         session_id = request.GET.get('session_id')
         user_obj = User.objects.filter(sessionid=session_id).first()
         if user_obj:

@@ -164,6 +164,20 @@ RANCHER_SECRET_KEY = 'EMpw28rxpmrm5iqZXVYDC7QcEY2AQiRhFNquvK3H'
 
 # cors config
 CORS_ORIGIN_ALLOW_ALL = True  # 全部接受，白名单将会无效。
+CORS_ALLOW_HEADERS = (
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'Cookie',
+    'access-control-allow-credentials',
+    'sessionid',
+    'x-requested-with',
+)
 
 # session config
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'

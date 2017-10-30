@@ -8,6 +8,7 @@ import threading
 
 from django.conf import settings
 from django.contrib.auth.models import *
+from django.contrib.auth.hashers import make_password
 
 from firstapp.models import *
 
@@ -31,6 +32,22 @@ def init():
     AppInstall.objects.create(name='nginx', version='1.8.1', app_image='/media/app_images/nginx.jpg')
     AppInstall.objects.create(name='consul', version='2.11.1', app_image='/media/app_images/consul.jpg')
     AppInstall.objects.create(name='maven', version='3.5.0', app_image='/media/app_images/maven.jpg')
+
+    #  初始化用户、角色、权限
+    admin_permissions = range(1, 500)  # 管理员权限，全部权限
+
+    # 系统管理用户组
+    admin_group = Group.objects.create(name='系统管理员')   # 主要控制接口权限
+
+    # 角色
+    admin_role = Role.objects.create(name='系统管理员')  # 主要控制菜单
+
+    # 用户
+    admin = User.objects.create(username='admin', password=make_password('123456'), is_superuser=1)
+
+    admin.groups.add(admin_group)
+    admin.role = admin_role
+    admin.save()
 
 
 def thread_init(sender, **kwargs):

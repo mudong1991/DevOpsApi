@@ -27,23 +27,20 @@ class Menu(models.Model):
 
     class Meta:
         db_table = "menu"
-        default_permissions = ("read", "change", "add", "delete")
 
 
-class GroupProfile(models.Model):
-    name = models.CharField(max_length=500)
-    create_time = models.DateTimeField(default=timezone.now, blank=True, null=True)
-    description = models.CharField(max_length=500, blank=True, null=True)
-    permission = models.ManyToManyField(Permission, blank=True, null=True)
-    parent_group = models.ForeignKey('self')
+class Role(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.CharField(max_length=255, default='', blank=True, null=True)
+    remark = models.CharField(max_length=255, default='', blank=True, null=True)
+    menus = models.ManyToManyField(Menu)
 
     class Meta:
-        db_table = 'group_profile'
+        db_table = "role"
 
 
 class User(AbstractUser):
-    parent_user = models.ForeignKey('self')
-    groups_profile = models.ManyToManyField(GroupProfile)
+    role = models.ForeignKey(Role, blank=True, null=True)
     avatar = models.ImageField(upload_to='avatar/%Y/%m', default='avatar/default.jpg',
                                max_length=400, blank=True, null=True, verbose_name='用户头像')
     sessionid = models.CharField(default="", max_length=255, blank=True, null=True)
@@ -52,7 +49,6 @@ class User(AbstractUser):
 
     class Meta:
         db_table = 'user'
-        default_permissions = ("read", "change", "add", "delete")
 
 
 class BusinessAdmin(models.Model):
