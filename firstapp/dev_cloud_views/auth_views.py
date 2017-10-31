@@ -140,6 +140,7 @@ class LoginView(APIView):
                 user_obj.save()
 
                 result_code = 0
+                cache.set('verify_%s' % request_ip, '', 0)
                 result_data['sessionid'] = user_obj.sessionid
                 result_data['csrftoken'] = get_token(request)
 
