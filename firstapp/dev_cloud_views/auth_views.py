@@ -17,6 +17,7 @@ from firstapp import util
 from firstapp import serializers
 from django.core.cache import cache
 from django.conf import settings
+from django.contrib.auth.models import AnonymousUser
 from django.middleware.csrf import get_token
 
 
@@ -69,16 +70,15 @@ class LoginView(APIView):
                 # 重新生成验证码
                 img, code = gvcode.generate()
                 img.save(settings.VERIFY_IMG_PATH)
-                cache.set('verify_%s' % request_ip, code, 360 * 24 * 60 * 60)
+                cache.set('verify_%s' % request_ip, code, 1 * 24 * 60 * 60)
                 result_code = 1
                 result_data['result_msg'] = '对不起，验证码错误！'
                 # 生成验证码
                 img, code = gvcode.generate()
                 img.save(settings.VERIFY_IMG_PATH)
-                cache.set('verify_%s' % request_ip, code, 360 * 24 * 60 * 60)
+                cache.set('verify_%s' % request_ip, code, 1 * 24 * 60 * 60)
                 result_data['verify_url'] = settings.VERIFY_IMG_URL
                 return Response({'result_code': result_code, 'result_data': result_data})
-
         else:
             result_data['need_verify'] = False
 
@@ -143,30 +143,16 @@ class LoginView(APIView):
                 result_data['sessionid'] = user_obj.sessionid
                 result_data['csrftoken'] = get_token(request)
 
-            print result_data
-            # 生成验证码
-            if result_data["need_verify"]:
-                img, code = gvcode.generate()
-                img.save(settings.VERIFY_IMG_PATH)
-                cache.set('verify_%s' % request_ip, code, 360 * 24 * 60 * 60)
-                result_data['verify_url'] = settings.VERIFY_IMG_URL
-            else:
-                cache.set('verify_%s' % request_ip, '', 0)
+        # 生成验证码
+        if result_data["need_verify"]:
+            img, code = gvcode.generate()
+            img.save(settings.VERIFY_IMG_PATH)
+            cache.set('verify_%s' % request_ip, code, 1 * 24 * 60 * 60)
+            result_data['verify_url'] = settings.VERIFY_IMG_URL
+        else:
+            cache.set('verify_%s' % request_ip, '', 0)
 
         return Response({'result_code': result_code, 'result_data': result_data})
-
-
-class CheckUserInfo(APIView):
-    def get(self, request):
-        print request.user
-        print '------'
-        session_id = request.GET.get('session_id')
-        user_obj = User.objects.filter(sessionid=session_id).first()
-        if user_obj:
-            user_data = serializers.UserSerializer(user_obj).data
-            return Response({'result_code': 0, 'result_data': user_data})
-        else:
-            return Response({'result_code': 1, 'result_data': '没有找到相关用户信息'})
 
 
 class GetVerify(APIView):
@@ -182,8 +168,30 @@ class GetVerify(APIView):
         verify = cache.get('verify_%s' % request_ip)
         img, code = gvcode.generate()
         img.save(settings.VERIFY_IMG_PATH)
-        cache.set('verify_%s' % request_ip, code, 360 * 24 * 60 * 60)
         if verify is not None:
+            cache.set('verify_%s' % request_ip, code, 1 * 24 * 60 * 60)
             return Response({'need_verify': True, 'verify_url': settings.VERIFY_IMG_URL})
         else:
             return Response({'need_verify': False, 'verify_url': ''})
+
+
+class CheckUserInfo(APIView):
+    def get(self, request):
+        user_obj = request.user
+        if user_obj and not isinstance(user_obj, AnonymousUser):
+            user_data = serializers.UserSerializer(user_obj).data
+            return Response({'result_code': 0, 'result_data': user_data})
+        else:
+            return Response({'result_code': 1, 'result_data': None})
+
+
+class CheckUserIsLogin(APIView):
+    """
+    检查用户是否已经登录
+    """
+    def get(self, request):
+        session_key = request.COOKIES['sessionid']
+        if session_key != request.user.sessionid:
+            return Response({'result_code': 1, 'result_data': 'yes'})
+        else:
+            return Response({'result_code': 0, 'result_data': 'no'})

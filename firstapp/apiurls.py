@@ -14,7 +14,7 @@ urlpatterns = [
     url(r'^login/', auth_views.LoginView.as_view(), name='login'),  # 登录
     url(r'^checkUserInfo/', auth_views.CheckUserInfo.as_view()),  # 判断用户是否登录
     url(r'^getVerify/', auth_views.GetVerify.as_view()),
-    url(r'^checkUserIsLogin/', auth_views.GetVerify.as_view()),  # 判断用户是否已登录
+    url(r'^checkUserIsLogin/', auth_views.CheckUserIsLogin.as_view()),  # 判断用户是否已登录
 ]
 
 route = routers.DefaultRouter()
