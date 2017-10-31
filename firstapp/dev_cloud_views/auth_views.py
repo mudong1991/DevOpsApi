@@ -41,15 +41,15 @@ def catch_exception_response(func):
 
 
 class LoginView(APIView):
-    def post(self, request, format=None):
+    def get(self, request, format=None):
         if request.META.has_key('HTTP_X_FORWARDED_FOR'):
             request_ip = request.META['HTTP_X_FORWARDED_FOR']
         else:
             request_ip = request.META['REMOTE_ADDR']
 
-        username = request.data.get('username', '')
-        password = request.data.get('password', '')
-        verify_code = request.data.get('verifyCode', '')
+        username = request.GET.get('username', '')
+        password = request.GET.get('password', '')
+        verify_code = request.GET.get('verifyCode', '')
 
         # 失败次数和锁定时间
         login_fail_limit_times = settings.LOGIN_FAILED_TIMES_LIMIT
@@ -156,6 +156,17 @@ class LoginView(APIView):
         return Response({'result_code': result_code, 'result_data': result_data})
 
 
+class LogoutView(APIView):
+    def get(self, request):
+        if request.user:
+            user_obj = request.user
+            user_obj.isonline = 0
+            user_obj.save()
+
+        logout(request)
+        return Response({'result_code': 0, 'result_data': 'logout success'})
+
+
 class GetVerify(APIView):
     """
     获取验证码
@@ -191,8 +202,11 @@ class CheckUserIsLogin(APIView):
     检查用户是否已经登录
     """
     def get(self, request):
-        session_key = request.COOKIES['sessionid']
-        if session_key != request.user.sessionid:
-            return Response({'result_code': 1, 'result_data': 'yes'})
+        if request.COOKIES.has_key('sessionid'):
+            session_key = request.COOKIES['sessionid']
+            if session_key != request.user.sessionid:
+                return Response({'result_code': 1, 'result_data': 'yes'})
+            else:
+                return Response({'result_code': 0, 'result_data': 'no'})
         else:
-            return Response({'result_code': 0, 'result_data': 'no'})
+            return Response({'result_code': 0, 'result_data': 'no_sessionid'})

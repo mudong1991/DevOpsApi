@@ -12,6 +12,7 @@ from firstapp.dev_cloud_views import auth_views
 
 urlpatterns = [
     url(r'^login/', auth_views.LoginView.as_view(), name='login'),  # 登录
+    url(r'^logout/', auth_views.LogoutView.as_view(), name='logout'),  # 登录
     url(r'^checkUserInfo/', auth_views.CheckUserInfo.as_view()),  # 判断用户是否登录
     url(r'^getVerify/', auth_views.GetVerify.as_view()),
     url(r'^checkUserIsLogin/', auth_views.CheckUserIsLogin.as_view()),  # 判断用户是否已登录
