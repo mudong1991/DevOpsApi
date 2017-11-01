@@ -8,7 +8,7 @@ api的相关路由
 from rest_framework import routers
 from django.conf.urls import url
 from firstapp import apiviews
-from firstapp.dev_cloud_views import auth_views
+from firstapp.dev_cloud_views import auth_views, common_views
 
 urlpatterns = [
     url(r'^login/', auth_views.LoginView.as_view(), name='login'),  # 登录
@@ -16,6 +16,7 @@ urlpatterns = [
     url(r'^checkUserInfo/', auth_views.CheckUserInfo.as_view()),  # 判断用户是否登录
     url(r'^getVerify/', auth_views.GetVerify.as_view()),
     url(r'^checkUserIsLogin/', auth_views.CheckUserIsLogin.as_view()),  # 判断用户是否已登录
+    url(r'^getNowWeather', common_views.GetNowWeather.as_view())  # 获取天气信息
 ]
 
 route = routers.DefaultRouter()
