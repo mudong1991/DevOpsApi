@@ -162,6 +162,9 @@ GIT_REPO_PATH = os.path.abspath('/git_tmp_file/')
 RANCHER_ACCESS_KEY = '2B678BF6DA2629916E25'
 RANCHER_SECRET_KEY = 'EMpw28rxpmrm5iqZXVYDC7QcEY2AQiRhFNquvK3H'
 
+# 和风天气配置
+HEWEATHER_URL = 'https://free-api.heweather.com/s6/weather/now?key=4656f4c7fce74951bd8ac781dab867e9&location='
+
 # cors config
 CORS_ORIGIN_ALLOW_ALL = True  # 全部接受，白名单将会无效。
 CORS_ALLOW_CREDENTIALS = True  # 允许跨域验证

@@ -21,35 +21,16 @@ from django.contrib.auth.models import AnonymousUser
 from django.middleware.csrf import get_token
 
 
-def catch_exception_response(func):
-    """
-    装饰器函数，捕获函数方法中发生的异常，返回给前端正常的消息提示
-
-    :param func: 接收一个函数
-    :return: 响应Response对象
-
-    发生其他异常时，响应前端异常信息。
-    """
-
-    def _wrapper(*args, **kwargs):
-        try:
-            return func(*args, **kwargs)
-        except Exception, e:
-            return Response(e.message, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-    return _wrapper
-
-
 class LoginView(APIView):
-    def get(self, request, format=None):
+    def post(self, request, format=None):
         if request.META.has_key('HTTP_X_FORWARDED_FOR'):
             request_ip = request.META['HTTP_X_FORWARDED_FOR']
         else:
             request_ip = request.META['REMOTE_ADDR']
 
-        username = request.GET.get('username', '')
-        password = request.GET.get('password', '')
-        verify_code = request.GET.get('verifyCode', '')
+        username = request.data.get('username', '')
+        password = request.data.get('password', '')
+        verify_code = request.data.get('verifyCode', '')
 
         # 失败次数和锁定时间
         login_fail_limit_times = settings.LOGIN_FAILED_TIMES_LIMIT
@@ -157,7 +138,7 @@ class LoginView(APIView):
 
 
 class LogoutView(APIView):
-    def get(self, request):
+    def post(self, request):
         if request.user:
             user_obj = request.user
             user_obj.isonline = 0
