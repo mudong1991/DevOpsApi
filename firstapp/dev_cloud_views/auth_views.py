@@ -185,7 +185,7 @@ class CheckUserIsLogin(APIView):
     def get(self, request):
         if request.COOKIES.has_key('sessionid'):
             session_key = request.COOKIES['sessionid']
-            if session_key != request.user.sessionid:
+            if not isinstance(request.user, AnonymousUser) and session_key != request.user.sessionid:
                 return Response({'result_code': 1, 'result_data': 'yes'})
             else:
                 return Response({'result_code': 0, 'result_data': 'no'})

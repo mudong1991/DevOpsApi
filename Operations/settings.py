@@ -186,7 +186,8 @@ CORS_ALLOW_HEADERS = (
 # session config
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-SESSION_COOKIE_AGE = 12 * 60 * 60
+SESSION_COOKIE_AGE = 24 * 60 * 60  # 会话cookie过期时间（秒）
+SESSION_COOKIE_HTTPONLY = False  # 会话是否使用httponly，如果为true，js将无法获取会话cookie
 SESSION_TIME_OUT = 48 * 60 * 60
 
 
