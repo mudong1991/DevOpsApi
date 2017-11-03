@@ -28,6 +28,6 @@ class GetNowWeather(APIView):
         print settings.HEWEATHER_URL
         response = request_session.get(settings.HEWEATHER_URL + location_ip.encode('utf-8'), timeout=time_out)
         if response.status_code == 200:
-            return Response({'result_code': 0, 'result_data': response.json()})
+            return Response(response.json())
         else:
             raise Exception('获取天气信息失败！')
