@@ -7,14 +7,13 @@
 """
 import gvcode
 import time
-import os
 from firstapp.models import User
+from rest_framework.permissions import AllowAny
 from django.contrib.auth import login, logout, authenticate
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status
 from firstapp import util
-from firstapp import serializers
+from firstapp.base_views import serializers
 from django.core.cache import cache
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
@@ -22,6 +21,8 @@ from django.middleware.csrf import get_token
 
 
 class LoginView(APIView):
+    permission_classes = (AllowAny,)
+
     def post(self, request, format=None):
         if request.META.has_key('HTTP_X_FORWARDED_FOR'):
             request_ip = request.META['HTTP_X_FORWARDED_FOR']
@@ -152,6 +153,8 @@ class GetVerify(APIView):
     """
     获取验证码
     """
+    permission_classes = (AllowAny,)
+
     def get(self, request):
         if request.META.has_key('HTTP_X_FORWARDED_FOR'):
             request_ip = request.META['HTTP_X_FORWARDED_FOR']
@@ -169,6 +172,8 @@ class GetVerify(APIView):
 
 
 class CheckUserInfo(APIView):
+    permission_classes = (AllowAny,)
+
     def get(self, request):
         user_obj = request.user
         if user_obj and not isinstance(user_obj, AnonymousUser):
@@ -182,6 +187,8 @@ class CheckUserIsLogin(APIView):
     """
     检查用户是否已经登录
     """
+    permission_classes = (AllowAny,)
+
     def get(self, request):
         if request.COOKIES.has_key('sessionid'):
             session_key = request.COOKIES['sessionid']

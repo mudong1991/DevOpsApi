@@ -215,9 +215,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # rest_framework config
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',),
-    # 'DEFAULT_PERMISSION_CLASSES': (
-    #     'firstapp.permission_classes.ModelPermissions',
-    # ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
     # 'EXCEPTION_HANDLER': 'firstapp.cust_exceptions.custom_exception_handler',
     # 'PAGINATE_BY':10,
     # 'PAGINATE_BY_PARAM':'page_size',
