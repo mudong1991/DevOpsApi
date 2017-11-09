@@ -10,7 +10,7 @@ from django.utils import six
 # 自定义分页类
 class CustomPagination(pagination.PageNumberPagination):
     page_size = settings.PAGE_SIZE
-    page_size_query_param = "rows"  # 分页的项集合
+    page_size_query_param = "pageSize"  # 分页的项集合
 
     def paginate_queryset(self, queryset, request, view=None):
         """
@@ -46,11 +46,13 @@ class CustomPagination(pagination.PageNumberPagination):
 
     def get_paginated_response(self, data):
         return Response({
-            'pageNo': self.page.number,
-            'totalPage': self.page.paginator.num_pages,
-            'totalCount': self.page.paginator.count,
-            'pageSize': self.page_size,
-            'next': self.get_next_link(),
-            'previous': self.get_previous_link(),
-            'tableList': data,
+            'pageInfo': {
+                'pageNo': self.page.number,
+                'totalPage': self.page.paginator.num_pages,
+                'totalCount': self.page.paginator.count,
+                'pageSize': self.page_size,
+                'next': self.get_next_link(),
+                'previous': self.get_previous_link(),
+            },
+            'tableData': data,
         })

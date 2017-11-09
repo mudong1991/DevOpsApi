@@ -11,6 +11,10 @@ from firstapp import cust_exceptions
 
 
 class UserSerializer(serializers.ModelSerializer):
+    last_login = serializers.DateTimeField(format=settings.TIME_FORMAT, required=False)
+    role_name = serializers.StringRelatedField(source='role.name', read_only=True)
+    groups_name = serializers.SlugRelatedField(source='groups', many=True, slug_field='name', read_only=True)
+
     class Meta:
         model = models.User
         fields = '__all__'

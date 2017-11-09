@@ -18,6 +18,7 @@ class UserAdminSet(viewsets.ModelViewSet):
     queryset = models.User.objects.all()
     serializer_class = serializers.UserSerializer
     filter_backends = (filters.DjangoFilterBackend, filters.SearchFilter, GridOrderingFilter)
+    filter_fields = ('username', )
     search_fields = ('$username', )
     pagination_class = CustomPagination
     permission_classes = [ModelPermission]
