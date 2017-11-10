@@ -122,7 +122,9 @@ class LoginView(APIView):
                 user_obj.save()
 
                 result_code = 0
-                cache.set('verify_%s' % request_ip, '', 0)
+                cache.delete('verify_%s' % request_ip)
+                cache.delete('error_login_%s_%s' % (request_ip, username))
+                result_data['need_verify'] = False
                 result_data['sessionid'] = user_obj.sessionid
                 result_data['csrftoken'] = get_token(request)
 
@@ -133,7 +135,7 @@ class LoginView(APIView):
             cache.set('verify_%s' % request_ip, code, 1 * 24 * 60 * 60)
             result_data['verify_url'] = settings.VERIFY_IMG_URL
         else:
-            cache.set('verify_%s' % request_ip, '', 0)
+            cache.delete('verify_%s' % request_ip)
 
         return Response({'result_code': result_code, 'result_data': result_data})
 
@@ -162,9 +164,9 @@ class GetVerify(APIView):
             request_ip = request.META['REMOTE_ADDR']
 
         verify = cache.get('verify_%s' % request_ip)
-        img, code = gvcode.generate()
-        img.save(settings.VERIFY_IMG_PATH)
         if verify is not None:
+            img, code = gvcode.generate()
+            img.save(settings.VERIFY_IMG_PATH)
             cache.set('verify_%s' % request_ip, code, 1 * 24 * 60 * 60)
             return Response({'need_verify': True, 'verify_url': settings.VERIFY_IMG_URL})
         else:
