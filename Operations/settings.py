@@ -147,7 +147,7 @@ VERIFY_IMG_URL = '/media/verify/verify.jpg'  # 验证码生成url
 VERIFY_IMG_PATH = os.path.join(BASE_DIR, 'media', 'verify', 'verify.jpg')  # 验证码生成路径
 API_ENCRYPT = False  # 是否对api数据机密
 API_DECRYPT = False  # 是否对api前端传过来的数据解密
-PAGE_SIZE = 8  # 分页大小
+PAGE_SIZE = 10  # 分页大小
 WEB_URL_PREFIX = 'operations'  # 最后没有斜杠，项目中不能出现此开头的路径，否则不能重定向
 LOGIN_URL = "/login/"
 LOGOUT_URL = "/logout/"
@@ -186,7 +186,8 @@ CORS_ALLOW_HEADERS = (
 # session config
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-SESSION_COOKIE_AGE = 12 * 60 * 60
+SESSION_COOKIE_AGE = 24 * 60 * 60  # 会话cookie过期时间（秒）
+SESSION_COOKIE_HTTPONLY = False  # 会话是否使用httponly，如果为true，js将无法获取会话cookie
 SESSION_TIME_OUT = 48 * 60 * 60
 
 
@@ -214,9 +215,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # rest_framework config
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',),
-    # 'DEFAULT_PERMISSION_CLASSES': (
-    #     'firstapp.permission_classes.ModelPermissions',
-    # ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
     # 'EXCEPTION_HANDLER': 'firstapp.cust_exceptions.custom_exception_handler',
     # 'PAGINATE_BY':10,
     # 'PAGINATE_BY_PARAM':'page_size',

@@ -7,14 +7,13 @@
 """
 import gvcode
 import time
-import os
 from firstapp.models import User
+from rest_framework.permissions import AllowAny
 from django.contrib.auth import login, logout, authenticate
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status
 from firstapp import util
-from firstapp import serializers
+from firstapp.base_views import serializers
 from django.core.cache import cache
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
@@ -22,6 +21,8 @@ from django.middleware.csrf import get_token
 
 
 class LoginView(APIView):
+    permission_classes = (AllowAny,)
+
     def post(self, request, format=None):
         if request.META.has_key('HTTP_X_FORWARDED_FOR'):
             request_ip = request.META['HTTP_X_FORWARDED_FOR']
@@ -121,7 +122,9 @@ class LoginView(APIView):
                 user_obj.save()
 
                 result_code = 0
-                cache.set('verify_%s' % request_ip, '', 0)
+                cache.delete('verify_%s' % request_ip)
+                cache.delete('error_login_%s_%s' % (request_ip, username))
+                result_data['need_verify'] = False
                 result_data['sessionid'] = user_obj.sessionid
                 result_data['csrftoken'] = get_token(request)
 
@@ -132,7 +135,7 @@ class LoginView(APIView):
             cache.set('verify_%s' % request_ip, code, 1 * 24 * 60 * 60)
             result_data['verify_url'] = settings.VERIFY_IMG_URL
         else:
-            cache.set('verify_%s' % request_ip, '', 0)
+            cache.delete('verify_%s' % request_ip)
 
         return Response({'result_code': result_code, 'result_data': result_data})
 
@@ -152,6 +155,8 @@ class GetVerify(APIView):
     """
     获取验证码
     """
+    permission_classes = (AllowAny,)
+
     def get(self, request):
         if request.META.has_key('HTTP_X_FORWARDED_FOR'):
             request_ip = request.META['HTTP_X_FORWARDED_FOR']
@@ -159,9 +164,9 @@ class GetVerify(APIView):
             request_ip = request.META['REMOTE_ADDR']
 
         verify = cache.get('verify_%s' % request_ip)
-        img, code = gvcode.generate()
-        img.save(settings.VERIFY_IMG_PATH)
         if verify is not None:
+            img, code = gvcode.generate()
+            img.save(settings.VERIFY_IMG_PATH)
             cache.set('verify_%s' % request_ip, code, 1 * 24 * 60 * 60)
             return Response({'need_verify': True, 'verify_url': settings.VERIFY_IMG_URL})
         else:
@@ -169,6 +174,8 @@ class GetVerify(APIView):
 
 
 class CheckUserInfo(APIView):
+    permission_classes = (AllowAny,)
+
     def get(self, request):
         user_obj = request.user
         if user_obj and not isinstance(user_obj, AnonymousUser):
@@ -182,10 +189,12 @@ class CheckUserIsLogin(APIView):
     """
     检查用户是否已经登录
     """
+    permission_classes = (AllowAny,)
+
     def get(self, request):
         if request.COOKIES.has_key('sessionid'):
             session_key = request.COOKIES['sessionid']
-            if session_key != request.user.sessionid:
+            if not isinstance(request.user, AnonymousUser) and session_key != request.user.sessionid:
                 return Response({'result_code': 1, 'result_data': 'yes'})
             else:
                 return Response({'result_code': 0, 'result_data': 'no'})

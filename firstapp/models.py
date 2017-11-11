@@ -27,6 +27,7 @@ class Menu(models.Model):
 
     class Meta:
         db_table = "menu"
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class Role(models.Model):
@@ -37,6 +38,7 @@ class Role(models.Model):
 
     class Meta:
         db_table = "role"
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class User(AbstractUser):
@@ -49,6 +51,7 @@ class User(AbstractUser):
 
     class Meta:
         db_table = 'user'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class BusinessAdmin(models.Model):
@@ -77,6 +80,7 @@ class BusinessAdmin(models.Model):
 
     class Meta:
         db_table = 'business_admin'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class Cluster(models.Model):
@@ -97,6 +101,7 @@ class Cluster(models.Model):
 
     class Meta:
         db_table = 'cluster'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class Module(models.Model):
@@ -116,6 +121,7 @@ class Module(models.Model):
 
     class Meta:
         db_table = 'module'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class SaltMaster(models.Model):
@@ -133,6 +139,7 @@ class SaltMaster(models.Model):
 
     class Meta:
         db_table = 'salt_master'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class SaltMinion(models.Model):
@@ -159,6 +166,7 @@ class SaltMinion(models.Model):
 
     class Meta:
         db_table = 'salt_minion'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class ProjectCenter(models.Model):
@@ -205,6 +213,7 @@ class ProjectCenter(models.Model):
 
     class Meta:
         db_table = 'project_center'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class ProjectDockerInfo(models.Model):
@@ -230,6 +239,7 @@ class ProjectDockerInfo(models.Model):
 
     class Meta:
         db_table = 'project_docker_info'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class ProjectImageSave(models.Model):
@@ -247,6 +257,7 @@ class ProjectImageSave(models.Model):
 
     class Meta:
         db_table = 'project_image_save'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class ProjectDeployInfo(models.Model):
@@ -266,6 +277,7 @@ class ProjectDeployInfo(models.Model):
 
     class Meta:
         db_table = 'project_deploy_info'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class AppInstall(models.Model):
@@ -283,6 +295,7 @@ class AppInstall(models.Model):
 
     class Meta:
         db_table = 'app_install'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class AppInstallStatus(models.Model):
@@ -303,6 +316,7 @@ class AppInstallStatus(models.Model):
 
     class Meta:
         db_table = 'app_install_status'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class OperationLog(models.Model):
@@ -313,6 +327,7 @@ class OperationLog(models.Model):
 
     class Meta:
         db_table = 'operation_log'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class HostPs(models.Model):
@@ -328,6 +343,7 @@ class HostPs(models.Model):
 
     class Meta:
         db_table = 'host_ps'
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class JenkinsJobs(models.Model):
@@ -351,6 +367,7 @@ class JenkinsJobs(models.Model):
 
     class Meta:
         db_table = "jenkins_jobs"
+        default_permissions = ("read", "change", "add", "delete")
 
 
 class ReceiverHooks(models.Model):
@@ -381,3 +398,4 @@ class ReceiverHooks(models.Model):
 
     class Meta:
         db_table = 'receiver_hooks'
+        default_permissions = ("read", "change", "add", "delete")

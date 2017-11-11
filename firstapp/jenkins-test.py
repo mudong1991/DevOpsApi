@@ -17,6 +17,7 @@ password = "123456"
 
 # 实例化jenkins对象，连接远程的jenkins master server
 server = jenkins.Jenkins(jenkins_server_url, username=user_id, password=password)
+print server.get_build_console_output("AutoTest".encode('utf-8'), 10)
 # print server.get_nodes()
 # all_jobs = server.get_all_jobs()
 # for c in all_jobs:
