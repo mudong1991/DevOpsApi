@@ -21,6 +21,15 @@ class UserSerializer(serializers.ModelSerializer):
         validated_data["password"] = make_password(validated_data["password"])
         return super(UserSerializer, self).create(validated_data)
 
+    def update(self, instance, validated_data):
+        print validated_data["password"]
+        print instance.password
+        if validated_data["password"] == instance.password:
+            return super(UserSerializer, self).update(instance, validated_data)
+        else:
+            validated_data["password"] = make_password(validated_data["password"])
+            return super(UserSerializer, self).update(instance, validated_data)
+
     class Meta:
         model = models.User
         fields = '__all__'

@@ -168,6 +168,14 @@ HEWEATHER_URL = 'https://free-api.heweather.com/s6/weather/now?key=4656f4c7fce74
 # cors config
 CORS_ORIGIN_ALLOW_ALL = True  # 全部接受，白名单将会无效。
 CORS_ALLOW_CREDENTIALS = True  # 允许跨域验证
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
 CORS_ALLOW_HEADERS = (
     'accept',
     'accept-encoding',
