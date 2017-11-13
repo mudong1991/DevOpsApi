@@ -8,21 +8,16 @@ api的相关路由
 from rest_framework import routers
 from django.conf.urls import url
 from firstapp import apiviews
-from firstapp.base_views import auth_views, common_views
-from system_settings_views import user_admin
+from base_views.base_apiurls import base_apiurls_map
+from system_settings_views import system_settings_apiurls
 
 urlpatterns = [
-    url(r'^login/', auth_views.LoginView.as_view(), name='login'),  # 登录
-    url(r'^logout/', auth_views.LogoutView.as_view(), name='logout'),  # 登录
-    url(r'^checkUserInfo/', auth_views.CheckUserInfo.as_view()),  # 判断用户是否登录
-    url(r'^getVerify/', auth_views.GetVerify.as_view()),
-    url(r'^checkUserIsLogin/', auth_views.CheckUserIsLogin.as_view()),  # 判断用户是否已登录
-    url(r'^getNowWeather', common_views.GetNowWeather.as_view())  # 获取天气信息
 ]
 
+urlpatterns += base_apiurls_map  # 基础视图路由
+urlpatterns += system_settings_apiurls.route.urls  # 系统设置相关路由
+
 route = routers.DefaultRouter()
-# 用户权限等管理
-route.register(r'users', user_admin.UserAdminSet)
 # 代理设置
 route.register(r'salt_master', apiviews.SaltMasterViewSet)
 route.register(r'salt_minion', apiviews.SaltMinionViewSet)
