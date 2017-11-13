@@ -15,6 +15,10 @@ class UserSerializer(serializers.ModelSerializer):
     role_name = serializers.StringRelatedField(source='role.name', read_only=True)
     groups_name = serializers.SlugRelatedField(source='groups', many=True, slug_field='name', read_only=True)
 
+    def create(self, validated_data):
+        print validated_data["password"]
+        return super(UserSerializer, self).create(validated_data)
+
     class Meta:
         model = models.User
         fields = '__all__'
