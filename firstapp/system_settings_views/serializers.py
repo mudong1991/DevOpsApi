@@ -22,8 +22,6 @@ class UserSerializer(serializers.ModelSerializer):
         return super(UserSerializer, self).create(validated_data)
 
     def update(self, instance, validated_data):
-        print validated_data["password"]
-        print instance.password
         if validated_data["password"] == instance.password:
             return super(UserSerializer, self).update(instance, validated_data)
         else:

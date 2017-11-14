@@ -148,7 +148,7 @@ VERIFY_IMG_PATH = os.path.join(BASE_DIR, 'media', 'verify', 'verify.jpg')  # 验
 API_ENCRYPT = False  # 是否对api数据机密
 API_DECRYPT = False  # 是否对api前端传过来的数据解密
 PAGE_SIZE = 10  # 分页大小
-WEB_URL_PREFIX = 'operations'  # 最后没有斜杠，项目中不能出现此开头的路径，否则不能重定向
+WEB_URL_PREFIX = ''  # 最后没有斜杠，项目中不能出现此开头的路径，否则不能重定向
 LOGIN_URL = "/login/"
 LOGOUT_URL = "/logout/"
 TIME_FORMAT = "%Y-%m-%d %H:%M:%S"  # 格式化时间格式化
@@ -175,6 +175,7 @@ CORS_ALLOW_METHODS = (
     'PATCH',
     'POST',
     'PUT',
+    'HEAD'
 )
 CORS_ALLOW_HEADERS = (
     'accept',
