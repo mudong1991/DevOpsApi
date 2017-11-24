@@ -17,6 +17,7 @@ from firstapp.base_views import serializers
 from django.core.cache import cache
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
+from django.contrib.auth.hashers import make_password
 from django.middleware.csrf import get_token
 
 
@@ -180,6 +181,9 @@ class CheckUserInfo(APIView):
         user_obj = request.user
         if user_obj and not isinstance(user_obj, AnonymousUser):
             user_data = serializers.UserSerializer(user_obj).data
+            user_data['avatar'] = '{scheme}://{host}{path}'.format(scheme=request.scheme,
+                                                                   host=request.get_host(),
+                                                                   path=user_data['avatar'])
             return Response({'result_code': 0, 'result_data': user_data})
         else:
             return Response({'result_code': 1, 'result_data': None})
@@ -200,3 +204,19 @@ class CheckUserIsLogin(APIView):
                 return Response({'result_code': 0, 'result_data': 'no'})
         else:
             return Response({'result_code': 0, 'result_data': 'no_sessionid'})
+
+
+class CheckUserPassword(APIView):
+    """
+    检查用户密码
+    """
+    def post(self, request):
+        user_password = request.data.get('password', '')
+        if not isinstance(request.user, AnonymousUser):
+            user = authenticate(username=request.user.username, password=user_password)
+            if user is not None:
+                return Response({'result_code': 1, 'result_data': 'yes'})
+            else:
+                return Response({'result_code': 0, 'result_data': 'no'})
+        else:
+            return Response({'result_code': 0, 'result_data': 'no_auth'})

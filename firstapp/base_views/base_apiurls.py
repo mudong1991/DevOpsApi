@@ -12,6 +12,7 @@ base_apiurls_map = [
     url(r'^login/', auth_views.LoginView.as_view(), name='login'),  # 登录
     url(r'^logout/', auth_views.LogoutView.as_view(), name='logout'),  # 登录
     url(r'^checkUserInfo/', auth_views.CheckUserInfo.as_view()),  # 判断用户是否登录
+    url(r'^checkUserPassword/', auth_views.CheckUserPassword.as_view()),
     url(r'^getVerify/', auth_views.GetVerify.as_view()),
     url(r'^checkUserIsLogin/', auth_views.CheckUserIsLogin.as_view()),  # 判断用户是否已登录
     url(r'^getNowWeather', common_views.GetNowWeather.as_view())  # 获取天气信息
